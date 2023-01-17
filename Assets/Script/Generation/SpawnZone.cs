@@ -8,6 +8,8 @@ public class SpawnZone : MonoBehaviour
    
    public  GameObject objet; // l'élement qu'on fait apparetre aleatoirement
 
+   
+
     [SerializeField]
     private Vector3 zoneSize; // represente la zone dans la qu'elle on fait apparetre l'élément 
 
@@ -19,16 +21,20 @@ public class SpawnZone : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))// ations que ce realise a chaque foit qu'on va utiliser la touche P 
         {
-            GameObject instantiated = Instantiate(objet); // on fait apparetre l'élément 
-
-            instantiated.transform.position = new Vector3(    // on modif la position d'intentiated pour definir l'endoit ou l'object va apparetre
-                Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),  // on genaire un valeur aléatoir pour le x du l'object compris entre sa valeur actuel - le x du la zone 
-                 1,
-                  Random.Range(transform.position.z - zoneSize.z / 2, transform.position.z + zoneSize.z / 2)
-                );
+            SpawnElement();
             StartCoroutine(SuprimerElement());
         }
 
+    }
+    public void SpawnElement()
+    {
+        GameObject instantiated = Instantiate(objet); // on fait apparetre l'élément 
+
+        instantiated.transform.position = new Vector3(    // on modif la position d'intentiated pour definir l'endoit ou l'object va apparetre
+            Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),  // on genaire un valeur aléatoir pour le x du l'object compris entre sa valeur actuel - le x du la zone 
+             1,
+              Random.Range(transform.position.z - zoneSize.z / 2, transform.position.z + zoneSize.z / 2)
+            );
     }
 
     private void OnDrawGizmos()
@@ -40,7 +46,9 @@ public class SpawnZone : MonoBehaviour
     IEnumerator SuprimerElement()
     {
         yield return new WaitForSeconds(dureElement);
-        Debug.Log(objet + " est detruie");
-        DestroyImmediate(objet, true); 
+      //  Debug.Log(objet + " est detruie");
+        Destroy(objet);
+        
     }
+    
 }
