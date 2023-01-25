@@ -10,18 +10,15 @@ public class CkecPoint : MonoBehaviour
     {
         respawnPoint = transform.position;
     }
-    private void OnCollisionEnter(Collision player)
+    private void OnCollisionEnter(Collision Player)
     {
-        if (player.transform.tag == "mort")
+        if (Player.transform.tag == "mort")
         {
-
+            transform.position = respawnPoint;
         }
-        if(player.transform.tag == "checkpoint")
+        if(Player.transform.tag == "checkpoint")
         {
-
+            respawnPoint = Player.transform.position;
         }
-    }
-
-
-    
+    }    
 }
