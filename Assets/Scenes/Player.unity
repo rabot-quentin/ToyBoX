@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 621258205}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: mort
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,8 +366,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2980012, y: 1, z: 1.1941404}
+  m_Center: {x: 0.14900044, y: 0, z: -0.09706988}
 --- !u!23 &621258206
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 955786839}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,8 +463,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2204354, y: 1, z: 1.1713119}
+  m_Center: {x: -0.11021745, y: 0, z: 0.08565577}
 --- !u!23 &955786840
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 1141171708}
   - component: {fileID: 1141171707}
   - component: {fileID: 1141171706}
+  - component: {fileID: 1141171713}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -801,6 +802,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1141171713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141171705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0adb4d14a8bfec48956af4918d0d100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862575533
 GameObject:
   m_ObjectHideFlags: 0
